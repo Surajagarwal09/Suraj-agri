@@ -1,48 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
+
 body{
-    background-color: rgb(17, 23, 36);
-    color: aliceblue;
-}
-nav{
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    font-family: "Roboto Condensed", sans-serif;
+    height: 100%;
     width: 100%;
-    height: 70px;
-    color: blue;
     background-color: rgb(17, 23, 36);
-    padding: 3vh;
 }
-#navtext{
-    text-align: center;
-    margin-left: 2vw;
-    font-size: 2rem;
-}
-#navlist{
+
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(17, 23, 36);
+    font-family: "Roboto Condensed", sans-serif;
+    position: relative;
+    height: 70px;
     color: aliceblue;
-    text-align: center;
+}
+.name{
+    color: blue;
+    font-size: 1.5rem;
+}
+#ullist{
+    display: flex;
+    gap: 30px;
+}
+#darkmode{
+    background-color: transparent;
+    color: aliceblue ;
+    border: none;
+    font-size: 1.8rem;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+#darkmode:hover{
+    color: yellow;
+}
+#navList{
     font-size: 1.5rem;
     display: flex;
-    list-style-type: none;
-    gap: 1.5vw;
-    margin-right: 2vw;
+    gap: 30px;
     cursor: pointer;
+    text-align: center;
+    align-items: center;
 }
 .list,#darkmode{
     transition: transform 0.2s ease;
 }
 .list:active,#darkmode:active{
     transform: scale(0.96);
-}
-a{
-    color: inherit;
-    text-decoration: none;
 }
 .list:hover{
     color: blue;
@@ -52,26 +66,64 @@ a{
     color: blue;
     text-decoration: underline;
 }
-#darkmode{
-    border: none;
-    background-color: transparent;
-    color: aliceblue;
-}
-#darkmode:hover{
-    color: yellow;
+#navList li{
+    list-style-type: none;
 }
 
-@media screen and (max-width:655px) {
-    #navlist{
-        font-size: 22px;
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-icon{
+    display: none;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.menu-icon i{
+    color: aliceblue;
+    font-size: 30px;
+    transition: transform 0.2s ease;
+}
+.menu-icon:active,.menu-icon i:active{
+    transform: scale(0.96);
+}
+@media (max-width:770px){
+    #navList{
+        font-size: 20px;
     }
 }
-@media screen and (max-width:360px) {
-    #navtext{
-        font-size: 15px;
+@media (max-width:686px){
+    #navList{
+        font-size: 16px;
     }
-    #navlist{
-        font-size: 13px;
-        gap: 10px;
+}
+@media (max-width:625px) {
+    #darkmode{
+        display: inline-block;
+        margin-left: 30vw;
+        font-size: 28px;
+    }
+    #navList{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(17, 23, 36);
+        gap: 0;
+        overflow: hidden;
+    }
+    #navList li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
     }
 }
