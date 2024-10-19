@@ -8,8 +8,6 @@
 }
 
 body{
-    height: 100%;
-    width: 100%;
     background-color: rgb(17, 23, 36);
 }
 
@@ -21,25 +19,31 @@ nav{
     background-color: rgb(17, 23, 36);
     font-family: "Roboto Condensed", sans-serif;
     position: relative;
-    height: 70px;
+    height: 80px;
     color: aliceblue;
 }
-.name{
+.name h2{
+    font-family: "Roboto Condensed", sans-serif;
+    margin-left:35px;
+    margin-top: 20px;
     color: blue;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
 }
 #ullist{
+    margin-top: 20px;
     display: flex;
     gap: 30px;
 }
 #darkmode{
+    margin-top: 20px;
     background-color: transparent;
     color: aliceblue ;
     border: none;
     font-size: 1.8rem;
     align-items: center;
     cursor: pointer;
-    margin-right: 20px;
 }
 #darkmode:hover{
     color: yellow;
@@ -77,6 +81,7 @@ nav ul li a{
 
 .menu-icon{
     display: none;
+    margin-top: 20px;
     align-items: center;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -89,6 +94,51 @@ nav ul li a{
 .menu-icon:active,.menu-icon i:active{
     transform: scale(0.96);
 }
+.text{
+    margin-top: -200px;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-left: 60px;
+    display: flex;
+    color: aliceblue;
+}
+.prfimg img{
+    margin-top: 50px;
+    height:350px;
+    width: 350px;
+    margin-left: 73vw;
+  
+}
+h1{
+    color: aliceblue;
+    font-size: 60px;
+}
+h2{
+    color: blue;
+    font-size: 70px;
+}
+h3{
+    font-size: 35px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 60px;
+    color: aliceblue;
+}
+.about h3{
+    font-family: "Roboto Condensed", sans-serif;
+    color: blue;
+    font-size: 40px;
+    text-decoration: underline;
+}
+.about pre{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 22px;
+}
+
+/*  */
+
 @media (max-width:770px){
     #navList{
         font-size: 20px;
@@ -126,4 +176,25 @@ nav ul li a{
     #menuList{
         transition: all 0.5s;
     }
+}
+@media (max-width:361px){
+    .prfimg img{
+        margin-top: 50px;
+        height:200px;
+        width: 200px;
+        margin-left: 80px;
+    }
+    .text{
+        margin-top: 20px;
+    }
+    .text h1{
+        font-size: 20px;
+    }
+    .text h2{
+        font-size: 50px;
+    }
+    .text h3{
+        margin-left: 40px;
+    }
+
 }
