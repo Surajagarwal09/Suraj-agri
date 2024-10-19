@@ -178,6 +178,9 @@ h3{
     }
 }
 @media (max-width:361px){
+    .name h2{
+        margin-left: 0px;
+    }
     .prfimg img{
         margin-top: 50px;
         height:200px;
