@@ -190,7 +190,7 @@ h3{
         margin-top: 20px;
     }
     .text h1{
-        font-size: 20px;
+        font-size: 25px;
     }
     .text h2{
         font-size: 50px;
@@ -198,7 +198,11 @@ h3{
     .text h3{
         margin-left: 40px;
     }
+    .about h3{
+        margin-left: 50px;
+    }
     .about p{
+        margin-left: -30px;
         font-size: 15px;
      }
 } 
