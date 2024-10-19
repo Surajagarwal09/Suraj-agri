@@ -3,8 +3,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 body{
@@ -132,9 +130,10 @@ h3{
     font-size: 40px;
     text-decoration: underline;
 }
-.about pre{
+.about p{
     font-family: "Roboto Condensed", sans-serif;
     font-size: 22px;
+    display: flex;
 }
 
 /*  */
@@ -199,5 +198,7 @@ h3{
     .text h3{
         margin-left: 40px;
     }
-
-}
+    .about p{
+        font-size: 15px;
+     }
+} 
