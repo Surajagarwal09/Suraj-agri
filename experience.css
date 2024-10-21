@@ -189,9 +189,10 @@ nav ul li a{
         right: 0;
         flex-direction: column;
         text-align: center;
-        background-color: rgb(17, 23, 36);
+        background-color: rgb(17, 23, 36) !important;
         gap: 0;
         overflow: hidden;
+        z-index: 1001;
     }
     #navList li{
         padding: 20px;
