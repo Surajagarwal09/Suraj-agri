@@ -3,6 +3,8 @@
 *{
     margin: 0;
     padding: 0;
+    scrollbar-width: thin;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 body{
@@ -10,7 +12,7 @@ body{
 }
 
 nav{
-    padding: 10px 30px;
+    padding: 10px 30px ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -185,7 +187,7 @@ h3{
     margin-left: 60px;
     text-decoration: underline;
 }
-.p-3{
+.row .p-3{
     background-color: rgba(40, 44, 75, 0.329);
     color: aliceblue;
     border-radius: 15px;

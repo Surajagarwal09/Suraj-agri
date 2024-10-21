@@ -3,6 +3,8 @@
 *{
     margin: 0;
     padding: 0;
+    scrollbar-width: thin;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 body{
@@ -10,7 +12,7 @@ body{
 }
 
 nav{
-    padding: 10px 30px;
+    padding: 10px 30px ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,99 +91,76 @@ nav ul li a{
     font-size: 30px;
     transition: transform 0.2s ease;
 }
-.menu-icon:active,.menu-icon i:active,#resume:active,.profile:active{
+.menu-icon:active,.menu-icon i:active{
     transform: scale(0.96);
 }
+
+.container{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+.content{
+    position: relative;
+    padding: 10px 20px;
+    width: 50%;
+    color: aliceblue;
+}
 .text{
-    margin-top: -250px;
-    font-family: "Roboto Condensed", sans-serif;
-    margin-left: 60px;
-    display: flex;
-    color: aliceblue;
-}
-.prfimg img{
-    margin-top: 50px;
-    height:45vh;
-    width: 25vw;
-    margin-left: 70%;
-}
-h1{
-    color: aliceblue;
-    font-size: 60px;
-    margin-top: -25px;
-}
-h2{
-    color: blue;
-    font-size: 70px;
-}
-h3{
-    font-size: 35px;
-}
-.buttons{
-    font-family: "Roboto Condensed", sans-serif;
-    margin-top: 20px;
-    display: flex;
-    gap: 30px;
-}
-#resume{
-    background-color: rgb(17, 23, 36);
-    color: blue;
-    font-size: 22px;
-    padding: 5px;
+    padding: 10px 10px;
+    position: relative;
     border: 3px solid blue;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    margin-left: 60px;
-    align-items: center;
+    border-radius: 15px;
+    font-size: 16px;
 }
-#resume i{
-    justify-content: center;
-    font-size: 22px;
-}
-#resume:hover{
-    background-color: blue;
-    color: black;
-}
-.i{
-    display: flex;
-    gap: 15px;
-}
-.profile{
-    padding: 5px;
-    font-size: 20px;
-    background-color: transparent;
-    border: 2px solid ;
-    border-radius: 50%;
+.text h3{
     color: blue;
-    cursor: pointer;
-    transition: transform 0.2s ease;
 }
-.profile:hover{
-    background-color: blue;
-    color: black;
+.left-container{
+    left: 0;
 }
-.about{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-left: 60px;
-    color: aliceblue;
+.right-container{
+    left: 50%;
 }
-.about h3{
-    font-family: "Roboto Condensed", sans-serif;
-    color: blue;
-    font-size: 40px;
-    text-decoration: underline;
-}
-.about p{
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 22px;
-    display: flex;
+.container::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: aliceblue;
+    left: 50%;
+    top: 0%;
+    margin-left: -3px;
+    z-index: -1px;
 }
 
+.ul li{
+    margin: 5px;
+} 
+.left-container::before {
+    content: '';
+    position: absolute;
+    border: solid blue;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    left: 99.5%;
+    transform: translateX(-50%) rotate(135deg);
+    top: 25px;
+}
+
+.right-container::before {
+    content: '';
+    position: absolute;
+    border: solid blue;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    right: 100%;
+    transform: translateX(50%) rotate(-50deg);
+    top: 25px;
+}
 /*  */
-
 @media (max-width:770px){
     #navList{
         font-size: 20px;
@@ -196,31 +175,6 @@ h3{
 /*  */
 @media (max-width:625px) {
     .name h2{
-        margin-left: 0px;
-    }
-    .prfimg img{
-        margin-top: 50px;
-        height:300px;
-        width: 300px;
-        margin-left: 150px;
-    }
-    .text{
-        margin-top: 20px;
-    }
-    .text h1{
-        margin-top: -30px;
-        font-size: 50px;
-    }
-    .text h2{
-        margin-left: 0px;
-    }
-    .text h3{
-        margin-left: 0px;
-    }
-    #resume{
-        margin-left: 60px;
-    }
-    .about h3{
         margin-left: 0px;
     }
     #darkmode{
@@ -251,167 +205,42 @@ h3{
     }
 }
 /*  */
-@media (max-width:566px){
-    .text h1{
-        margin-top: -30px;
-        font-size: 45px;
+@media (max-width:500px) {
+    .left-container::before {
+        left: 0.5%;
+        transform: translateX(50%) rotate(-50deg);
     }
-    .buttons{
-        display: block;
-     }
-     #resume{
-        margin-left: 60px;
-     }
-     .i{
-        margin-top: 10px;
-        margin-left: 60px;
-     }
+    .right-container::before {
+        left: 0.5%;
+        transform: translateX(50%) rotate(-50deg);
+    }
+    .container{
+        margin: 50px auto;
+    }
+    .container::after{
+        left: 31px;
+    }
+    .content{
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 15px;
+    }
+    .text{
+        font-size: 16px;
+    }
+    .right-container{
+        left: 0;
+    }
 }
 /*  */
-@media (max-width:450px)  {
-    .prfimg img{
-        margin-top: 50px;
-        height:300px;
-        width: 250px;
-        margin-left: 60px;
-    }
-}
-/*  */
-
 @media (max-width:431px){
     .name h2{
         margin-left: 0px;
     }
-    .prfimg img{
-        margin-top: 50px;
-        height:200px;
-        width: 200px;
-        margin-left: 130px;
-    }
-    .text{
-        margin-top: 20px;
-    }
-    .text h1{
-        margin-top: -30px;
-        font-size: 33px;
-    }
-    .text h2{
-        margin-left: 70px;
-        font-size: 50px;
-    }
-    .text h3{
-        margin-left: 90px;
-    }
-    .about h3{
-        margin-left: 100px;
-    }
-    .about p{
-        margin-left: -30px;
-        font-size: 15px;
-     }
-     .buttons{
-        display: block;
-     }
-     #resume{
-        margin-left:125px;
-     }
-     .i{
-        margin-top: 10px;
-        margin-left: 125px;
-     }
 } 
+/*  */
 @media (max-width:376px){
     .name h2{
         margin-left: 0px;
     }
-    .prfimg img{
-        margin-top: 50px;
-        height:200px;
-        width: 200px;
-        margin-left: 100px;
-    }
-    .text{
-        margin-top: 20px;
-    }
-    .text h1{
-        margin-top: -30px;
-        font-size: 30px;
-        margin-left: -10px;
-    }
-    .text h2{
-        margin-left: 25px;
-        font-size: 50px;
-    }
-    .text h3{
-        margin-left: 65px;
-    }
-    .about h3{
-        margin-left: 50px;
-    }
-    .about p{
-        margin-left: -30px;
-        font-size: 15px;
-     }
-     .buttons{
-        display: block;
-     }
-     #resume{
-        margin-left:110px;
-     }
-     .i{
-        margin-top: 10px;
-        margin-left: 110px;
-     }
-} 
-/*  */
-@media (max-width:394px) {
-    .text h1{
-        font-size: 30px;
-    }
-    .about h3{
-        margin-left: 60px;
-    }
-}
-@media (max-width:361px){
-    .name h2{
-        margin-left: 0px;
-    }
-    .prfimg img{
-        margin-top: 50px;
-        height:200px;
-        width: 200px;
-        margin-left: 90px;
-    }
-    .text{
-        margin-top: 20px;
-    }
-    .text h1{
-        margin-top: -30px;
-        font-size: 30px;
-        margin-left: -28px;
-    }
-    .text h2{
-        margin-left: 25px;
-        font-size: 50px;
-    }
-    .text h3{
-        margin-left: 60px;
-    }
-    .about h3{
-        margin-left: 40px;
-    }
-    .about p{
-        margin-left: -30px;
-        font-size: 15px;
-     }
-     .buttons{
-        display: block;
-     }
-     #resume{
-        margin-left:90px;
-     }
-     .i{
-        margin-top: 10px;
-        margin-left: 90px;
-     }
 } 
