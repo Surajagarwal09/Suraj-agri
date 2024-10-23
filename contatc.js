@@ -41,12 +41,11 @@ function sendEmail() {
             alert('Email sent successfully!');
 
             document.getElementById('contact-form').reset();
-
+            
             sendButton.disabled = false;
             sendButton.style.cursor = 'pointer';
         }, function(error) {
             alert('Failed to send email. Try again later.');
-
             sendButton.disabled = false;
             sendButton.style.cursor = 'pointer';
         });
